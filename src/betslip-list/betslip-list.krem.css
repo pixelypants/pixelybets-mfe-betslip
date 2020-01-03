@@ -1,0 +1,17 @@
+.bet {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--white);
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--white);
+}
+
+.bet:last-child {
+  border-bottom: none;
+}
+
+.bet:first-child {
+  border-top: 1px solid var(--white);
+}
