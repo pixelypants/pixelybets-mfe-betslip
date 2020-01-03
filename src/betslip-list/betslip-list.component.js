@@ -22,7 +22,7 @@ export default class BetslipList extends React.Component {
                     className='bet'
                     to={`/`}
                   >
-                    {bet.name}
+                    {bet.name + " : $" + bet.amount}
                   </Link>
                 )
               })

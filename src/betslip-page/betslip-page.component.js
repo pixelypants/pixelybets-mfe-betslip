@@ -4,27 +4,25 @@ import { Scoped } from 'kremling'
 import styles from './betslip-page.krem.css'
 import BetslipList from "../betslip-list/betslip-list.component";
 
-// import BetslipStore from "@portal/betslipStore";
+import BetslipStore from "@portal/betslipStore";
 
 @AsyncDecorator
 export default class BetslipPage extends React.Component {
 
   state = {
-    bets: [
-      { name: 'bet one' },
-      { name: 'bet two' }
-    ]
+    bets: []
   }
   storeSub = null
 
-  // componentDidMount() {
-  //   this.storeSub = BetslipStore.stateChanged.subscribe(state => {
-  //     if (state) {
-  //       this.setState({ bets: state.bets });
-  //     }
-  //   })
-  //   BetslipStore.fetchBets();
-  // }
+  componentDidMount() {
+    this.storeSub = BetslipStore.stateChanged.subscribe(state => {
+      if (state) {
+        this.setState({ bets: state.bets });
+      }
+    })
+    BetslipStore.getBets()
+      .subscribe(bets => this.setState({ bets: bets }))
+  }
 
   render() {
     const { bets } = this.state

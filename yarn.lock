@@ -716,6 +716,13 @@
   resolved "https://registry.yarnpkg.com/@codewithdan/observable-store/-/observable-store-2.2.3.tgz#6d3ef20716aa886161f256211ec9ac106d97a83a"
   integrity sha512-rpZ2Ds8wXfupnkB7nPFhNcWvuPFeXxP6L1PdNhu6CtVd5acYtNgYSJ1ndLRYhSCmfhbo3CF9gHS9o5Hjn0pfkA==
 
+"@hudson.graham/pixely-ui@^0.0.4":
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/@hudson.graham/pixely-ui/-/pixely-ui-0.0.4.tgz#12415675da0b2afef35ccad1f4cc121f06ea5050"
+  integrity sha512-fA03+caA0Fe8a2h9xkhWB430pWLxIRPkBzOdfiYsaFqjPrpx631u+p52pXchmOU31Ni5jsbjQptZqAC+WcHd6Q==
+  dependencies:
+    stencil "0.0.5"
+
 "@types/events@*":
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/@types/events/-/events-3.0.0.tgz#2862f3f58a9a7f7c3e78d79f130dd4d71c25c2a7"
@@ -4884,6 +4891,13 @@ static-extend@^0.1.1:
   resolved "https://registry.yarnpkg.com/statuses/-/statuses-1.5.0.tgz#161c7dac177659fd9811f43771fa99381478628c"
   integrity sha1-Fhx9rBd2Wf2YEfQ3cfqZOBR4Yow=
 
+stencil@0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/stencil/-/stencil-0.0.5.tgz#d71fdd933e3b1f724736b5c388f191a7e7fc1d47"
+  integrity sha1-1x/dkz47H3JHNrXDiPGRp+f8HUc=
+  dependencies:
+    xmldom "0.1.15"
+
 stream-browserify@^2.0.1:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/stream-browserify/-/stream-browserify-2.0.2.tgz#87521d38a44aa7ee91ce1cd2a47df0cb49dd660b"
@@ -5512,6 +5526,11 @@ ws@^6.2.1:
   integrity sha512-GIyAXC2cB7LjvpgMt9EKS2ldqr0MTrORaleiOno6TweZ6r3TKtoFQWay/2PceJ3RuBasOHzXNn5Lrw1X0bEjqA==
   dependencies:
     async-limiter "~1.0.0"
+
+xmldom@0.1.15:
+  version "0.1.15"
+  resolved "https://registry.yarnpkg.com/xmldom/-/xmldom-0.1.15.tgz#b3048062f1bdd52edc421424459f06dceeb2f94d"
+  integrity sha1-swSAYvG91S7cQhQkRZ8G3O6y+U0=
 
 xtend@^4.0.0, xtend@~4.0.1:
   version "4.0.2"

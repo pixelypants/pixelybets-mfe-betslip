@@ -30,6 +30,14 @@ export const unload = [
   reactLifecycles.unload,
 ]
 
+export const devtools = {
+  overlays: {
+    selectors: [
+      ".betslipPage",
+    ],
+  }
+}
+
 function domElementGetter() {
   let el = document.getElementById("betslip");
   if (!el) {

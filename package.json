@@ -13,6 +13,7 @@
   "dependencies": {
     "@codewithdan/observable-store": "^2.2.3",
     "@codewithdan/observable-store-extensions": "^2.2.3",
+    "@hudson.graham/pixely-ui": "^0.0.4",
     "async-decorator": "0.3.0",
     "kremling": "1.0.4",
     "query-string": "6.1.0",
