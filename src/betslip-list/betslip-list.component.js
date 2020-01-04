@@ -4,6 +4,7 @@ import { getPeople } from '../utils/api.js'
 import styles from './betslip-list.krem.css'
 import { withRouter } from 'react-router'
 import { Link } from 'react-router-dom'
+import uuid from "uuid"
 
 @withRouter
 export default class BetslipList extends React.Component {
@@ -18,7 +19,7 @@ export default class BetslipList extends React.Component {
               bets.map((bet, index) => {
                 return (
                   <Link
-                    key={bet.name}
+                    key={uuid.v1()}
                     className='bet'
                     to={`/`}
                   >

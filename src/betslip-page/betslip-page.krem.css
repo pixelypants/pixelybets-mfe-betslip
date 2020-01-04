@@ -2,18 +2,16 @@
   display: flex;
 }
 
-.listWrapper {
-  padding: 24px;
-  width: 30%;
+.betslipPage {
+  width: 300px;
 }
 
-.selectedWrapper {
-  width: 70%;
-  border-left: 2px solid var(--white);
+.listWrapper {
   padding: 24px;
 }
 
 .betslipPage {
-  height: calc(100% - var(--navbar-height));
+  height: 400px;
+  background-color: forestgreen;
 }
 

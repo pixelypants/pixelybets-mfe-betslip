@@ -32,7 +32,7 @@ export default class BetslipPage extends React.Component {
           <div className='betslipPageContents'>
             <div className='listWrapper'>
               <div>
-                <p>Your bets:</p>
+                <h1>Betslip:</h1>
                 <BetslipList
                   bets={this.state.bets}
                 />
