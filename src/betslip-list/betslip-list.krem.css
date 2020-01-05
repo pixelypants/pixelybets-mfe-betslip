@@ -1,17 +1,10 @@
-.bet {
-  height: 50px;
+
+.betslipList {
   display: flex;
-  align-items: center;
-  border-bottom: 1px solid var(--white);
-  cursor: pointer;
-  text-decoration: none;
-  color: var(--white);
+  flex-direction: column;
 }
 
-.bet:last-child {
-  border-bottom: none;
-}
-
-.bet:first-child {
-  border-top: 1px solid var(--white);
+.bet {
+  height: 30px;
+  margin-bottom: 5px;
 }

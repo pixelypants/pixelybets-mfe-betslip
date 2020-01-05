@@ -1,9 +1,6 @@
 .betslipPageContents {
   display: flex;
-}
-
-.betslipPage {
-  width: 300px;
+  flex-direction: column;
 }
 
 .listWrapper {
@@ -12,6 +9,6 @@
 
 .betslipPage {
   height: 400px;
+  width:300px;
   background-color: forestgreen;
 }
-

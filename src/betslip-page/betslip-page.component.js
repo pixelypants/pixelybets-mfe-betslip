@@ -9,19 +9,31 @@ import BetslipStore from "@portal/betslipStore";
 @AsyncDecorator
 export default class BetslipPage extends React.Component {
 
-  state = {
-    bets: []
+  constructor(props) {
+    super(props);
+    this.handleClick = this.handleClick.bind(this);
+    this.state = {
+      bets: []
+    }
+    this.betslipStoreSub = null
   }
-  storeSub = null
 
   componentDidMount() {
-    this.storeSub = BetslipStore.stateChanged.subscribe(state => {
+    this.betslipStoreSub = BetslipStore.stateChanged.subscribe(state => {
       if (state) {
         this.setState({ bets: state.bets });
       }
     })
     BetslipStore.getBets()
       .subscribe(bets => this.setState({ bets: bets }))
+  }
+
+  componentWillUnmount() {
+    this.betslipStoreSub.unsubscribe();
+  }
+
+  handleClick(id) {
+    BetslipStore.deleteBet(id);
   }
 
   render() {
@@ -35,6 +47,7 @@ export default class BetslipPage extends React.Component {
                 <h1>Betslip:</h1>
                 <BetslipList
                   bets={this.state.bets}
+                  onClick={this.handleClick}
                 />
               </div>
             </div>

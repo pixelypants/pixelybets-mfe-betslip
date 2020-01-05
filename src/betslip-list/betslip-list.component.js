@@ -6,25 +6,20 @@ import { withRouter } from 'react-router'
 import { Link } from 'react-router-dom'
 import uuid from "uuid"
 
-@withRouter
 export default class BetslipList extends React.Component {
 
   render() {
-    const { bets } = this.props
+    const { bets, onClick } = this.props
     return (
       <Scoped postcss={styles}>
-        <div className='betslipList'>
+        <div className='betslipList' id='betslipList'>
           <Fragment>
             {
               bets.map((bet, index) => {
                 return (
-                  <Link
-                    key={uuid.v1()}
-                    className='bet'
-                    to={`/`}
-                  >
-                    {bet.name + " : $" + bet.amount}
-                  </Link>
+                  <button key={uuid.v1()} id={bet.id} className='bet' onClick={e => onClick(bet.id)}>
+                    {bet.id + " : " + bet.name + " : $" + bet.amount}
+                  </button>
                 )
               })
             }
